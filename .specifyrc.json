@@ -1,0 +1,32 @@
+{
+  "repository": "@strapi/Strapi-Design-System",
+  "personalAccessToken": "f486f4ec03e71bec52da3ecad498481f8e8bc1e4590dad7feef4589f05826714",
+  "rules": [
+    {
+      "name": "Design Tokens / Colors",
+      "path": "src/theme/colors.js",
+      "filter": {
+        "types": ["color"]
+      },
+      "parsers": [
+        {
+          "name": "to-jss",
+          "options": {
+            "formatName": "camelCase",
+            "formatTokens": {
+              "colorFormat": "hex8",
+              "textStyleFormat": "classObject",
+              "fontSizeUnit": "px"
+            },
+            "formatConfig": {
+              "jssObjectName": "lightTheme",
+              "exportDefault": false,
+              "tabWidth": 4,
+              "singleQuote": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
