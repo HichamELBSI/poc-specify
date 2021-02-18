@@ -1,0 +1,37 @@
+{
+  "repository": "@strapi/Strapi-Design-System",
+  "rules": [
+    {
+      "path": "src/icons",
+      "filter": {
+        "types": ["vector"]
+      }
+    },
+    {
+      "name": "Design Tokens / Colors",
+      "path": "src/theme/colors.js",
+      "filter": {
+        "types": ["color"]
+      },
+      "parsers": [
+        {
+          "name": "to-jss",
+          "options": {
+            "formatName": "camelCase",
+            "formatTokens": {
+              "colorFormat": "hex8",
+              "textStyleFormat": "classObject",
+              "fontSizeUnit": "px"
+            },
+            "formatConfig": {
+              "jssObjectName": "lightTheme",
+              "exportDefault": false,
+              "tabWidth": 4,
+              "singleQuote": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
